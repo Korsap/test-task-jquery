@@ -1,0 +1,19 @@
+version: '2'
+networks:
+    net:
+        ipam:
+            driver: default
+            config:
+                - subnet: 10.20.0.0/28
+
+services:
+    web:
+        build:
+            context: .
+            dockerfile: ./Dockerfile
+        ports:
+            - 32179:3014
+        restart: on-failure
+        networks:
+            - net
+

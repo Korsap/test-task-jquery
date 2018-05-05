@@ -1,0 +1,29 @@
+{
+  "name": "front-summer-school",
+  "version": "1.0.0",
+  "description": "example project",
+  "scripts": {
+    "start": "node server.js",
+    "build": "gulp",
+    "start-lite": "node server-lite.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://inikishkin@bitbucket.org/frontendsummerschooln/front-summer-school.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/inikishkin/front-summer-school#readme",
+  "devDependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.4"
+  },
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-cli": "^2.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.1"
+  }
+}
