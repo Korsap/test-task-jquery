@@ -1081,13 +1081,16 @@ body {
 
 .b-slide__image {
   position: absolute;
+  /*float: right;*/
   top: 106px;
-  right: -71px;
+  /*right: -71px;*/
+  left: 560px;
   height: 100%;
   width: 100%;
+  /*max-width: 500px;*/
   background-repeat: no-repeat;
   background-image: url("../images/slide-1.png");
-  background-position: top right;
+  background-position: top left;
 }
 
 .b-slider__dots {
@@ -1122,6 +1125,31 @@ body {
 
 .b-slider__dot + .b-slider__dot {
   margin-left: 16px;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /*****************/

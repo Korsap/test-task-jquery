@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var concat = require('gulp-concat');
 var sass = require('gulp-sass');
 var pug = require('gulp-pug');
+var del = require('del');
 
 var sourceDir = './src';
 var destinationDir = './build';
@@ -44,5 +45,16 @@ gulp.task('build-page', function () {
       }))
       .pipe(gulp.dest(destinationDir));
 });
+gulp.task('clean', function () {
+    return del(destinationDir)
+});
 
 gulp.task('default', ['bundle-styles', 'build-page', 'bundle-scripts', 'copy-images', 'copy-fonts']);
+
+gulp.task('watch', ['bundle-styles', 'build-page', 'bundle-scripts', 'copy-images', 'copy-fonts'], function () {
+	var jsSource = sourceDir + '/js/*.js';
+	var cssSource = sourceDir + '/css/style.scss'
+    gulp.watch(jsSource, ['bundle-scripts']);
+	gulp.watch(cssSource, ['bundle-styles'])
+	gulp.watch(sourceDir + '/index.pug', ['build-page'])
+});
