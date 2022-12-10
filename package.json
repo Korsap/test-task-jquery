@@ -17,7 +17,7 @@
   "homepage": "https://bitbucket.org/inikishkin/front-summer-school#readme",
   "devDependencies": {
     "cors": "^2.8.4",
-    "express": "^4.16.4"
+    "express": "^4.17.3"
   },
   "dependencies": {
     "gulp": "^3.9.1",
